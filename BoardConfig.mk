@@ -91,4 +91,4 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_FORCE_USE_BUSYBOX := true
 
 # PBRP Conf
-PB_TORCH_PATH := /sys/class/leds/led:torch_1
+PB_TORCH_PATH := /sys/class/leds/led:torch_0
