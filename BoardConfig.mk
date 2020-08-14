@@ -89,6 +89,7 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 # PBRP Conf
 PB_TORCH_PATH := /sys/class/leds/led:torch_0
