@@ -12,8 +12,10 @@ jobs:
       FLAVOR: 'eng'
       TEST_BUILD: 'true'
       MAINTAINER: '@Kry9toN'
+      PB_OFFICIAL: true
       CHANGELOG: |
-        TEST BUILD
+        Fix flash light
+        Fix usb mtp
     working_directory: /home/builder/pitchblack
     steps:
       - run:
