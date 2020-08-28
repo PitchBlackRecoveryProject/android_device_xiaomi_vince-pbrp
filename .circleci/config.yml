@@ -10,7 +10,6 @@ jobs:
       VENDOR: 'xiaomi'
       CODENAME: 'vince'
       FLAVOR: 'eng'
-      TEST_BUILD: 'true'
       MAINTAINER: '@Kry9toN'
       PB_OFFICIAL: true
       CHANGELOG: |
