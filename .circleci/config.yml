@@ -12,7 +12,7 @@ jobs:
       FLAVOR: 'eng'
       TEST_BUILD: 'true'
       MAINTAINER: '@Kry9toN'
-      PB_OFFICIAL: true
+      # PB_OFFICIAL: true
       CHANGELOG: |
         Fix flash light
         Fix usb mtp
