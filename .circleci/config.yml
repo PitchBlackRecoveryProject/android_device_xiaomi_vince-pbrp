@@ -1,37 +1,38 @@
 version: 2.1
+executors:
+  worker:
+    docker:
+      - image: fr3akyphantom/droid-builder:latest
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
 jobs:
   build:
-    docker:
-      # new all-in-one docker image
-      - image: fr3akyphantom/droid-builder:latest
+    executor: worker
     environment:
       MANIFEST_BRANCH: 'android-9.0'
-      VERSION: '3.0.0'
+      # PBRP_BRANCH: ''
       VENDOR: 'xiaomi'
       CODENAME: 'vince'
       FLAVOR: 'eng'
       TEST_BUILD: 'true'
+      # PB_OFFICIAL: 'true'
       MAINTAINER: '@Kry9toN'
-      # PB_OFFICIAL: true
       CHANGELOG: |
-        Fix flash light
-        Fix usb mtp
+        - Test
     working_directory: /home/builder/pitchblack
     steps:
       - run:
           name: AIO Build
           command: |
-           
             wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_utils/pb/build.sh
             source build.sh
-          
-            
 workflows:
-  version: 2
+  version: 2.1
   build_and_test:
     jobs:
       - build:
-          context: org-global
           filters:
             branches:
               only: 'pie'
+          context: org-global
